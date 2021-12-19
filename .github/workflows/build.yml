@@ -10,7 +10,7 @@ jobs:
     strategy:
       matrix:
         board:
-          - nice_nano_v2
+          - nrfmicro_13
         shield:
           - a_dux_dux_left
           - a_dux_dux_right
@@ -65,6 +65,5 @@ jobs:
         with:
           name: "${{ steps.variables.outputs.artifact-name }}"
           path: |
-            build/zephyr/zmk.hex
             build/zephyr/zmk.uf2
         continue-on-error: true
